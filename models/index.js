@@ -17,3 +17,4 @@ mongoose.connection.on('error', (error) => {
 module.exports = {
   Animal: require('./Animal'),
 };
+
