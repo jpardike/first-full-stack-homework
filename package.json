@@ -11,5 +11,8 @@
     "url": "https://git.generalassemb.ly/jpardike2/first-full-stack-homework.git"
   },
   "author": "Joshua Pardike",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
