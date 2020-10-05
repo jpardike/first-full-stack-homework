@@ -15,7 +15,7 @@
 
 // module.exports = Animal;
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const animalSchema = new Schema({
@@ -28,6 +28,7 @@ const animalSchema = new Schema({
   hungry: Boolean,
 });
 
-const Animal = mongoose.model('Animal', animalSchema);
+const Animal = mongoose.model("Animal", animalSchema);
+
 
 module.exports = Animal;

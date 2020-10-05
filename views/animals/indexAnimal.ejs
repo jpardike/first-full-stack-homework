@@ -11,7 +11,11 @@
   <h1>All Animals</h1>
 
   <ul>
-    <li><%= animal[0].name %> </li>
+    <% for (let i = 0; i < animals.length; i++) { %>
+      <li>
+        <a href="/animals/<%= animals[i]._id %>"><%= animals[i].name %> </a>
+      </li>
+    <% } %> 
   </ul>
 </body>
 </html>
