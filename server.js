@@ -9,6 +9,7 @@ const PORT = 4000;
 app.set('view engine', 'ejs');
 
 // Controller
+const animalsCtrl = require('./controllers/animalController');
 
 // Middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -19,7 +20,7 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
-
+app.use('/animals', animalsCtrl);
 
 
 // Listener
