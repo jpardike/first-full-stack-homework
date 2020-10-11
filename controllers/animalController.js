@@ -71,4 +71,13 @@ router.put('/:id', (req, res) => {
   );
 });
 
+// Delete
+router.delete('/:id', (req, res) => {
+  db.Animal.findByIdAndRemove(req.params.id, (err, deletedAnimal) => {
+    if (err) return console.log(err);
+    console.log(deletedAnimal);
+    res.redirect('/animals');
+  });
+});
+
 module.exports = router;

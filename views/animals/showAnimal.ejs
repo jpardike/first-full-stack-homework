@@ -20,8 +20,12 @@
   <% } %> 
 
   <button>
-    <a href="/animals/<%= animal.id %>/edit">Edit Animal</a>
+    <a href="/animals/<%= animal._id %>/edit">Edit Animal</a>
   </button>
+
+  <form action="/animals/<%=animal._id%>?_method=DELETE" method="post">
+    <input type="submit" name="_method" value="Delete Animal"/>
+  </form>
 
 </body>
 </html>
