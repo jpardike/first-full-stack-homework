@@ -54,4 +54,21 @@ router.get('/:id/edit', (req, res) => {
   });
 });
 
+// Update
+router.put('/:id', (req, res) => {
+  // Update Boolean
+  req.body.hungry = req.body.hungry === 'on';
+
+  db.Animal.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedAnimal) => {
+      if (err) return console.log(err);
+
+      res.redirect(`/animals/${updatedAnimal.id}`);
+    }
+  );
+});
+
 module.exports = router;
