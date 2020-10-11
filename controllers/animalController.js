@@ -43,4 +43,15 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// Edit
+router.get('/:id/edit', (req, res) => {
+  db.Animal.findById(req.params.id, (err, foundAnimal) => {
+    if (err) return console.log(err);
+
+    res.render('animals/editAnimal', {
+      animal: foundAnimal
+    });
+  });
+});
+
 module.exports = router;
