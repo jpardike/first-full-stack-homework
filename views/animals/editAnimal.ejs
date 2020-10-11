@@ -10,6 +10,28 @@
 
   <h1>Edit Animals</h1>
 
-  
+  <form action="/animals/<%= animal._id %>?_method=PUT" method="POST">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" value="<%= animal.name %>" />
+    </div>
+
+    <div>
+      <label for="color">Color</label>
+      <input type="text" id="color" name="color" value="<%= animal.color %>" />
+    </div>
+
+    <div>
+      <label for="region">Region</label>
+      <input type="text" name="region" id="region" value="<%= animal.region %>" />
+    </div>
+
+    <div>
+      <label for="hungry">Is Hungry?</label>
+      <input type="checkbox" id="hungry" name="hungry" <%= animal.hungry ? 'checked' : '' %> />
+    </div>
+
+    <input type="submit" value="Update Animal" />
+
 </body>
 </html>
