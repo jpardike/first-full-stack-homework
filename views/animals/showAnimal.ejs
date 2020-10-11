@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animals</title>
+</head>
+<body>
+  <%- include('../partials/navbar') %> 
+
+  <h1>Show Animals</h1>
+
+  <p>Animal: <%= animal.name %></p>
+  <p>Color: <%= animal.color %></p>
+  <p>Region: <%= animal.region %></p>
+  <% if (animal.hungry) { %>
+    <p>This animal is hungry</p>
+  <% } else { %>
+    <p>This animal is not hungry</p>
+  <% } %> 
+
+</body>
+</html>
